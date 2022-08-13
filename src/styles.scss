@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+.w100{
+    width: 100vw;
+}
+.h100{
+    height: 100vh;
+}
+.h15{
+    height: 15vh;
+}
+.h85{
+    height: 85vh;
+}
+body{
+    margin: 0;
+    --primary-black: #080808;
+    --primary-white: #F9F9F9;
+    --primary-grey : #7E8183;
+    --primary-grey-dark  : #3E3F41;
+    --primary-grey-light : #BCBEC2;
+    --primary-grey-text: #C7C7C7;
+}
+
+@font-face {
+    font-family: "Marsden";
+    src: url("./assets/font/Marsden/Marsden-Cm-Black.woff2") format("woff2");
+}
+.flex{
+    display: flex;
+}

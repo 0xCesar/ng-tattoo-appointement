@@ -9,6 +9,8 @@ import { FlashPage } from './pages/flash/flash.component';
 import { AppointementPage } from './pages/appointement/appointement.component';
 import { OurServicePage } from './pages/our-service/our-service.component';
 import { homePage } from './pages/home/home.component';
+import { MenuComponent } from './component/menu/menu.component';
+import { PrompterComponent } from './component/prompter/prompter.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { homePage } from './pages/home/home.component';
     FlashPage,
     AppointementPage,
     OurServicePage,
-    homePage
+    homePage,
+    MenuComponent,
+    PrompterComponent
   ],
   imports: [
     BrowserModule,

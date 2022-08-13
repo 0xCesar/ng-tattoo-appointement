@@ -1,0 +1,193 @@
+.desktop{
+    display: none;
+}
+.desktopp{
+    display: none;
+}
+.first-word{
+    color: var(--primary-grey-text);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    #img-main-bg{
+        position: absolute;
+        top: 0;
+        width: auto;
+        margin-left: 50vw;
+        z-index: -1;
+    }
+    h1{
+        padding-top: 50vh;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 5vh;
+        font-family: 'Marsden';
+        color: var(--primary-black);
+       
+    }
+    p{
+        background-color: transparent;
+        color: var(--primary-black);
+        width: fit-content;
+        position: relative;
+        padding-bottom: 0.5vh;
+        padding-right: 25px;
+        
+    }
+    p:after{
+        content: "";
+    background: black;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    }
+}
+#first-step{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+#first-step #side-col{
+   width: 19vw;
+   align-self: flex-end;  
+}
+header{
+    display: flex;
+    width: 88vw;
+    justify-content: space-between;
+    margin: 5vh 5.5vw 0 6vw;
+    height: 10vh;
+    
+    align-items: center;
+    #logo{
+        height: 20px;
+        z-index: 10;
+        object-fit:contain;
+     
+    }
+    #menu{
+        height: 20px;
+        width: 30px;
+        position: relative;
+
+    }
+    #menu::after, #menu::before{
+        content: "";
+        background: black;
+        height: 2px;
+        border-radius: 10px;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        left: 0;
+    }
+    #menu::after{
+        top: 0 ;
+        margin-top: 5px;
+    }
+    #menu::before{
+        bottom: 0;
+        margin-bottom: 5px;
+    }
+}
+
+#home-page{
+    position: relative;
+    overflow: hidden;    
+}
+/* Desktop Breakpoint (1200px and above) */
+@media only screen and (min-width: 604px) {
+    #img-main-bg{      
+ 
+        margin-left: 30vw !important;
+  
+        
+
+    }
+    header{
+        margin: 0vh 2vw 5vh 3vw;
+        width: 95vw;
+        align-items: end !important;
+       
+    }
+    .desktop{
+        display: block;
+    }
+    #our-work-block{
+        width: 100%;
+        position: relative;
+        h3{
+            font-family: "Marsden";
+            margin: 0;
+            transform: translateY(30%);
+            font-size: 6vh;
+        }
+        img{
+            width: 75%;
+            display: block ;
+            margin-left: auto;
+            height: 38.5vh;
+            object-fit: cover;
+        }
+    }
+    main{
+        margin-left: 3vw;
+        margin-right: 0vw;
+        width: 30.5vw;
+        h1{
+            padding-top: 0;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 8vh;
+            margin-bottom: 8vh;
+        }
+        p{
+            margin-bottom: 3vh;
+        }
+        p:last-child{
+            margin-bottom: 8vh;
+        }
+        img{width: 45vw !important;}
+    }
+}
+/* Desktop Breakpoint (1200px and above) */
+@media only screen and (min-width: 1020px) {
+    header{
+        #left-block{
+            width: 30vw;
+            justify-content: space-between;
+            align-items: flex-end;
+            p{
+                margin: 0;
+                margin-bottom: 1vh;
+            }
+        }
+        #right-block{
+            width: 25vw;
+            justify-content: space-between;
+            align-items: flex-end;
+            p{
+                margin: 0;
+                margin-bottom: 1vh;
+            }
+        }
+    }
+    .text-rot{
+        margin-bottom: -5vh;
+        transform: rotate(-90deg);
+        transform-origin: 0 0;
+        font-size: small;
+    }
+    .prompter{
+        margin-right: 2vw;
+    }
+    .desktopp{
+        display: block !important;
+    }
+}
