@@ -1,1 +1,31 @@
-<p>our-work works!</p>
+
+<div id="our-work-page">
+    <header class="w100">
+        <div id="left-block" class="flex">
+            <a href="">
+            <img id="logo" src="../../../assets/logo.png" />
+            </a>
+            <p class="desktopp">Bryant Park, Manhattan, NYC</p>
+        </div>
+        
+        <div id="right-block" class="flex">
+            <p class="desktopp">Facebook</p>
+            <p class="desktopp">Twitter</p>
+            <p class="desktopp">Instagram</p>
+            <div id="menu"></div>
+        </div>
+        
+    </header>
+    <main>
+        <h1>Our work</h1>
+        <div class="container">
+            <mat-card class="item"  *ngFor="let flash of flashs">
+                <mat-card-title>{{flash.title}}</mat-card-title>
+                <mat-card-subtitle>Zone : {{flash.zone}}</mat-card-subtitle>
+                <img src={{flash.url}} />
+            </mat-card>
+
+        </div>
+        
+    </main>
+</div>
