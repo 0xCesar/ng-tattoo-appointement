@@ -1,1 +1,126 @@
-<p>appointement works!</p>
+<div id="appointment-page">
+    <header class=" w100">
+        <div id="left-block" class="flex">
+            <a href="">
+            <img id="logo" src="../../../assets/logo.png" />
+            </a>
+            <p class="desktopp">Bryant Park, Manhattan, NYC</p>
+        </div>
+        
+        <div id="right-block" class="flex">
+            <p class="desktopp">Facebook</p>
+            <p class="desktopp">Twitter</p>
+            <p class="desktopp">Instagram</p>
+            <div id="menu"></div>
+        </div>
+        
+    </header>
+    <main>
+        <div id="large-step-1">
+            <div id="sub-header">
+                <h2>Schedule yours future tattoo</h2>
+                <p>Choose your size, then pickup the date and book a slot.
+                    <br>
+                   You won't be able to change the date 48 hours before appointement.
+                </p>
+            </div>
+            <div id="container-step-1" *ngIf="step1">
+                <label>Select the tattoo size</label>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Size</mat-label>
+                    <mat-select>
+                      <mat-option value="small">Small Tattoo(around 6cmx6cm)</mat-option>
+                      <mat-option value="medium">Medium Tattoo(around 10cmx10cm)</mat-option>
+                      <mat-option value="large">Large Tattoo(around 15cmx15cm)</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            
+            <div id="container-step-2">
+                <label>Pickup your date</label>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+               
+            </div>
+            <div id="container-step-3">
+                <label>Book a slot</label>
+                <div class="flex space-around">
+                    <div>
+                        <button mat-raised-button disabled>14:30</button>
+                        <h5>Créneau déja pris</h5>
+                    </div>
+                    <div>
+                        <button mat-raised-button >12:00</button>
+                        <h5>Créneau séléctionable</h5>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary">16:00</button>
+                        <h5>Créneau séléctionné</h5>
+                    </div>
+                   
+                   
+                </div>
+               
+            </div>
+        </div>
+
+        <div id="large-step-2">
+        <h2>Enter your informations</h2>
+        <p>Enter your informations and write about your project</p>
+        <div class="step--1">
+            <div class="information-cli">
+                <mat-form-field appearance="fill">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput placeholder="Ex. John Doe">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Instagram</mat-label>
+                    <input matInput placeholder="Ex. @tattoofumee">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Ex. youremail@gmail.com">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Phone number</mat-label>
+                    <span matPrefix>+33 &nbsp;</span>
+                    <input type="tel" matInput placeholder="0123456789">
+                </mat-form-field>
+            </div>
+
+            <div class="information-tatt">
+                <mat-form-field appearance="fill">
+                    <mat-label>Tattoo zone</mat-label>
+                    <textarea matInput placeholder="Ex. My left hand"></textarea>
+                </mat-form-field>
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>Your Project</mat-label>
+                    <textarea matInput placeholder="Ex. I want a snake..."></textarea>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        </div>
+        
+        <div id="large-step-3">
+            <div class="container">
+                <h2>Checkout</h2>
+                <p>pay out appointment fee</p>
+                <div>
+                  <button (click)="makePayment(50)" mat-raised-button >Pay $50</button>
+                </div>
+              </div>
+        </div>
+       
+    </main>
+</div>

@@ -29,7 +29,8 @@ main{
         color: var(--primary-black);
        
     }
-    p{
+    a{
+        text-decoration: none;
         background-color: transparent;
         color: var(--primary-black);
         width: fit-content;
@@ -38,7 +39,7 @@ main{
         padding-right: 25px;
         
     }
-    p:after{
+    a:after{
         content: "";
     background: black;
     height: 2px;
@@ -147,10 +148,10 @@ header{
             font-size: 8vh;
             margin-bottom: 8vh;
         }
-        p{
+        a{
             margin-bottom: 3vh;
         }
-        p:last-child{
+        a:last-child{
             margin-bottom: 8vh;
         }
         img{width: 45vw !important;}

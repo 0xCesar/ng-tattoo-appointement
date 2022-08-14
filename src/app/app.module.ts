@@ -11,7 +11,13 @@ import { OurServicePage } from './pages/our-service/our-service.component';
 import { homePage } from './pages/home/home.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { PrompterComponent } from './component/prompter/prompter.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,9 +34,19 @@ import { PrompterComponent } from './component/prompter/prompter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
+
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+    MatNativeDateModule  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
