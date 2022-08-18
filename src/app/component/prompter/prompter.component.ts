@@ -9,6 +9,8 @@ export class PrompterComponent implements OnInit {
 
   @Input() currentPage: string = "01";
   @Input() _stotalPage: string = "04";
+  
+  @Input() color: string = "black";
 
   constructor() { }
 

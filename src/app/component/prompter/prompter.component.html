@@ -1,4 +1,4 @@
-<div id="container-prompter">
+<div id="container-prompter" *ngIf="color==='black'">
     <div id="currentpage">
         {{currentPage}}
     </div>
@@ -7,4 +7,12 @@
         {{_stotalPage}}
     </div>
 </div>
-
+<div id="container-prompter-white" *ngIf="color==='white'">
+    <div id="currentpage">
+        {{currentPage}}
+    </div>
+    <div id="middle-bar"></div>
+    <div id="totalpage">
+        {{_stotalPage}}
+    </div>
+</div>

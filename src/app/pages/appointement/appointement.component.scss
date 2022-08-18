@@ -4,7 +4,9 @@
 .desktopp{
     display: none;
 }
-
+#project{
+    height: 40vh;
+}
 #container-step-1{
     text-align: center;
     margin: 0;
@@ -35,7 +37,7 @@
 #large-step-1{
     background-color: bisque;
     padding: 10px;
-    width: 90vw;
+    width: 87vw;
     border-radius: 6px;
     margin-left: 3vw;
     margin-bottom: 2vh;
@@ -44,14 +46,14 @@
 #large-step-2{
     background-color: rgb(120, 207, 187);
     padding: 10px;
-    width: 90vw;
+    width: 87vw;
     border-radius: 6px;
     margin-left: 3vw;
     text-align: center;
     margin-bottom: 2vh;
     .step--1{
-        display: flex;
-        justify-content: space-around;
+        
+
         .information-cli{
             width: 300px;
             display: flex;
@@ -69,7 +71,7 @@
 #large-step-3{
     background-color: rgb(99, 108, 191);
     padding: 10px;
-    width: 90vw;
+    width: 87vw;
     border-radius: 6px;
     margin-left: 3vw;
     text-align: center;
@@ -137,6 +139,10 @@ header{
     }
     .desktop{
         display: block;
+    }
+    .step--1{
+        display: flex;
+        justify-content: space-around;
     }
 
 
