@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class homePage implements OnInit {
 
+  menu: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  switchMenuState(){
+    this.menu = !this.menu;
   }
 
 }

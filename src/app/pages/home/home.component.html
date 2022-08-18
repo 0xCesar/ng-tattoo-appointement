@@ -1,4 +1,7 @@
+
+   <menu-page *ngIf="menu"></menu-page>
 <div id="home-page">
+ 
     <header class=" w100">
         <div id="left-block" class="flex">
             <img id="logo" src="../../../assets/logo.png" />
@@ -9,7 +12,7 @@
             <p class="desktopp">Facebook</p>
             <p class="desktopp">Twitter</p>
             <p class="desktopp">Instagram</p>
-            <div id="menu"></div>
+            <div id="menu" [ngClass]="{'white': menu}" (click)=" switchMenuState()"></div>
         </div>
         
     </header>

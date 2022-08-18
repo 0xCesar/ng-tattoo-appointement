@@ -4,6 +4,16 @@
 .desktopp{
     display: none;
 }
+menu-page{
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    animation: slideY-in;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    z-index: 100;
+
+}
 .first-word{
     color: var(--primary-grey-text);
 }
@@ -76,13 +86,18 @@ header{
         object-fit:contain;
      
     }
+    .white::after, .white::before{
+        background: white !important;
+    }
     #menu{
         height: 20px;
         width: 30px;
         position: relative;
+        z-index: 101;
 
     }
     #menu::after, #menu::before{
+        z-index: 101;
         content: "";
         background: black;
         height: 2px;
@@ -301,6 +316,8 @@ header{
 #home-page{
     position: relative;
     overflow: hidden;    
+    height: 400vh;
+
 }
 /* Desktop Breakpoint (1200px and above) */
 @media only screen and (min-width: 604px) {
@@ -412,5 +429,13 @@ header{
     to{
         object-fit: cover;
         width: 25%;
+    }
+}
+@keyframes slideY-in {
+    from{
+        top:-100vh  
+      }
+    to{
+        top: 0;
     }
 }

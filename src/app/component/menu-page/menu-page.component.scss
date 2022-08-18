@@ -1,0 +1,24 @@
+.container-menu{
+    background-color: rgb(8, 8, 8);
+    color: white;
+    font-family: 'Marsden';
+    section{
+        border: white solid 1px;
+        border-radius: 6px;
+        width: 20vw;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1{
+        padding-top: 2vh;
+        margin: 0;
+        font-size: 4em;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
