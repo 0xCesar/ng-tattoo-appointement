@@ -86,35 +86,8 @@ header{
         object-fit:contain;
      
     }
-    .white::after, .white::before{
-        background: white !important;
-    }
-    #menu{
-        height: 20px;
-        width: 30px;
-        position: relative;
-        z-index: 101;
-
-    }
-    #menu::after, #menu::before{
-        z-index: 101;
-        content: "";
-        background: black;
-        height: 2px;
-        border-radius: 10px;
-        position: absolute;
-        width: 100%;
-        z-index: 10;
-        left: 0;
-    }
-    #menu::after{
-        top: 0 ;
-        margin-top: 5px;
-    }
-    #menu::before{
-        bottom: 0;
-        margin-bottom: 5px;
-    }
+    
+ 
 }
 #second-step{
     position: relative;
@@ -429,13 +402,5 @@ header{
     to{
         object-fit: cover;
         width: 25%;
-    }
-}
-@keyframes slideY-in {
-    from{
-        top:-100vh  
-      }
-    to{
-        top: 0;
     }
 }

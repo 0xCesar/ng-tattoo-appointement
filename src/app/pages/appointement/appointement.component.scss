@@ -12,6 +12,9 @@
     margin: 0;
     width: 90vw;
 }
+.white::after, .white::before{
+    background: white !important;
+}
 #sub-header{
     margin: 0;
     margin-bottom: 2vh;
@@ -35,22 +38,19 @@
 }
 
 #large-step-1{
-    background-color: bisque;
+ //   background-color: bisque;
     padding: 10px;
-    width: 87vw;
+    width: 90vw;
     border-radius: 6px;
-    margin-left: 3vw;
-    margin-bottom: 2vh;
+   
 }
 
 #large-step-2{
-    background-color: rgb(120, 207, 187);
+ //   background-color: rgb(120, 207, 187);
     padding: 10px;
-    width: 87vw;
+    width: 90vw;
     border-radius: 6px;
-    margin-left: 3vw;
-    text-align: center;
-    margin-bottom: 2vh;
+
     .step--1{
         
 
@@ -69,24 +69,29 @@
 
 
 #large-step-3{
-    background-color: rgb(99, 108, 191);
+ //   background-color: rgb(99, 108, 191);
     padding: 10px;
-    width: 87vw;
+    width: 90vw;
     border-radius: 6px;
-    margin-left: 3vw;
     text-align: center;
-    margin-bottom: 10vh;
-
-
     padding-bottom: 40px;
 
 }
 
 
-
+.white::after, .white::before{
+    background: white !important;
+}
 main{
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: #cacaca;
+    width: 90vw;
+    height: 90vh;
+    overflow: scroll;
+    display: flex;
+    border-radius: 12px;
 }
 header{
     display: flex;
@@ -173,3 +178,5 @@ header{
         display: block !important;
     }
 }
+
+

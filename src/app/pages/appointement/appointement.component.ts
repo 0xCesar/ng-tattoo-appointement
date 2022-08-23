@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,16 @@ export class AppointementPage implements OnInit {
 
   step1: boolean = true;
   step1Value: string = "e";
+
+  _stepCount: number = 1;
+
+  @ViewChild("largestep1") stepL1: ElementRef | undefined;
+  @ViewChild("largestep2") stepL2: ElementRef | undefined;
+  @ViewChild("largestep3") stepL3: ElementRef | undefined;
+  @ViewChild("progressbar") progressBar: ElementRef | undefined;
+
+  progressbarV: string = "33";
+  menu: boolean = false;
   paymentHandler: any = null;
   constructor() {}
   ngOnInit() {
@@ -49,6 +59,25 @@ export class AppointementPage implements OnInit {
       window.document.body.appendChild(script);
     }
   }
+  nextStep(){
+    if(this._stepCount === 1){
+     
+        console.log(this.stepL1);
+        this.progressbarV = "66";
+ 
+    
+    }
+    if(this._stepCount === 2){
+     
+      console.log(this.stepL1);
+      this.progressbarV = "100";
+  
+  }
+  this._stepCount++;
 
+  }
+  switchMenuState(){
+    this.menu = !this.menu;
+  }
 
 }

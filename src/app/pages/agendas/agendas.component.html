@@ -1,0 +1,77 @@
+<div id="agendas-page" class="w100 h100">
+
+   <div id="side-content" class="w20 h100">
+        <h3>Tattoo Shop's name</h3>
+        <!---   -->
+        <button-w-icon [ngClass]="{'active': selectedPage==='dashboard'}"       (click)="selectedPage='dashboard'" ></button-w-icon>
+        <button-w-icon [ngClass]="{'active': selectedPage==='calendar'}"        (click)="selectedPage='calendar'" [buttonName]="'calendar'" [icon]="'../../../assets/icon/calendar.svg'"></button-w-icon>
+        <button-w-icon [ngClass]="{'active': selectedPage==='statistique'}"     (click)="selectedPage='statistique'" [buttonName]="'statistique'" [icon]="'../../../assets/icon/bar-chart.svg'"></button-w-icon>
+        <button-w-icon [ngClass]="{'active': selectedPage==='setting'}"         (click)="selectedPage='setting'" [buttonName]="'setting'" [icon]="'../../../assets/icon/settings.svg'"></button-w-icon>
+    </div>
+    <div id="main-content" class="w80 h100">
+        <header>
+            <h4>{{selectedPage}}</h4>
+            <div id="content-profile">
+                <p>Ink Simon</p>
+                <img src="../../../assets/imgprofilesim.png">
+            </div>
+        </header>
+
+
+        <div *ngIf="selectedPage === 'dashboard'">
+            <main>
+               
+                <mat-card id="upevent"> 
+                    <div class="header-card">
+                        <h5>Upcoming event</h5>
+                        <a class="btn-round">See all</a>
+                    </div>
+                    <line-info></line-info>
+                    <line-info *ngFor="let client of upcomingAppointment" 
+                    [Name]="client.name"
+                    [TattoZone]="client.tattoozone"
+                    [date]="client.date"
+                    [horaire]="client.horaire"></line-info>
+                </mat-card>
+        
+                <mat-card class="calendar">
+                    <mat-calendar [(selected)]="selected"></mat-calendar>
+                </mat-card>
+
+                <mat-card class="stats">
+                    statistique
+                </mat-card>
+             
+            </main>
+        </div>
+       
+
+
+        <div *ngIf="selectedPage === 'calendar'">
+            calendrier
+        </div>
+
+        <div *ngIf="selectedPage === 'statistique'">
+            statistique
+        </div>
+
+        <div *ngIf="selectedPage === 'setting'">
+            setting
+        </div>
+       <!--- <div>
+            <h3>Calendar</h3>
+            <mat-card class="calendar">
+                <mat-calendar [(selected)]="selected"></mat-calendar>
+              </mat-card>
+              <p>Selected date: {{selected}}</p>
+            <button mat-raised-button>Add appointement</button>
+        </div>
+        <div>
+            <h4>Details appointement</h4>
+            <appointement-details></appointement-details>
+        </div>-->
+    </div>
+
+
+</div>
+

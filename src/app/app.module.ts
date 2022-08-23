@@ -20,6 +20,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MenuPageComponent } from './component/menu-page/menu-page.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { LoginComponent } from './pages/login/login.component';
+import { AgendasComponent } from './pages/agendas/agendas.component';
+import { AppointementDetailsComponent } from './component/appointement-details/appointement-details.component';
+import { LineInfoComponent } from './component/line-info/line-info.component';
+import { ButtonWIconComponent } from './component/button-w-icon/button-w-icon.component';
+
 
 @NgModule({
   declarations: [
@@ -32,9 +39,16 @@ import { MenuPageComponent } from './component/menu-page/menu-page.component';
     homePage,
     MenuComponent,
     PrompterComponent,
-    MenuPageComponent
+    MenuPageComponent,
+    LoginComponent,
+    AgendasComponent,
+    AppointementDetailsComponent,
+    LineInfoComponent,
+    ButtonWIconComponent,
+
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -44,7 +58,9 @@ import { MenuPageComponent } from './component/menu-page/menu-page.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+
+    MatProgressBarModule
 
   ],
   providers: [

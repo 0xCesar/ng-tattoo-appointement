@@ -1,4 +1,5 @@
-<div id="appointment-page">
+    <menu-page *ngIf="menu"></menu-page>
+   <div id="appointment-page">
     <header class=" w100">
         <div id="left-block" class="flex">
             <a href="">
@@ -11,12 +12,22 @@
             <p class="desktopp">Facebook</p>
             <p class="desktopp">Twitter</p>
             <p class="desktopp">Instagram</p>
-            <div id="menu"></div>
+            <div class="menu" [ngClass]="{'white': menu}" (click)=" switchMenuState()"></div>
         </div>
         
     </header>
+    <section class="progress-section">
+        
+        <mat-progress-bar
+            #progressbar
+            [color]="'purple'"
+            [mode]="'determinate'"
+            [value]="progressbarV">
+        </mat-progress-bar>
+      </section>
     <main>
-        <div id="large-step-1">
+        
+        <div id="large-step-1" #largestep1 *ngIf="_stepCount===1">
             <div id="sub-header">
                 <h2>Schedule yours future tattoo</h2>
                 <p>Choose your size, then pickup the date and book a slot.
@@ -65,11 +76,11 @@
                    
                    
                 </div>
-               
+                <button (click)="nextStep()" mat-button color="primary">Suivant</button>
             </div>
         </div>
 
-        <div id="large-step-2">
+        <div id="large-step-2"  #largestep2 *ngIf="_stepCount===2">
         <h2>Enter your informations</h2>
         <p>Enter your informations and write about your project</p>
         <div class="step--1">
@@ -109,10 +120,10 @@
             </div>
 
         </div>
-
+        <button (click)="nextStep()" mat-button color="primary">Suivant</button>
         </div>
         
-        <div id="large-step-3">
+        <div id="large-step-3"  #largestep3 *ngIf="_stepCount===3">
             <div class="container">
                 <h2>Checkout</h2>
                 <p>pay out appointment fee</p>

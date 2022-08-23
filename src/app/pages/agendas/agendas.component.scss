@@ -1,0 +1,101 @@
+
+    
+    #agendas-page{
+        display: flex;
+        --main-color: #E29838;
+        background-color: #252125;
+        #main-content{
+            background-color: #F8F7F2;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            overflow: scroll;
+            main{
+                margin-left: 5%;
+                
+            }
+            #upevent{
+                background-color: white;
+                width: 90%;
+                padding-bottom: 20px;
+                h5{
+                    margin: 0;
+                }
+                .header-card{
+                    color: black;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  
+                }
+                line-info{
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            header{
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+                margin-left: auto;
+                margin-right: auto;
+                #content-profile{
+                    display: flex;
+                    width: 200px;
+                    align-items: center;
+                    img{
+                        padding-left: 20px;
+                    }
+                }
+            }
+            
+        }
+        #side-content{
+
+           color: white;
+           margin-left: 20px;
+           button-w-icon{
+            width: 55%;
+           }
+           
+
+        }
+    }
+        
+    .calendar {
+        width: 375px;
+        margin-bottom: 20px;
+    }
+    .w20{
+        width: 20vw;
+    }
+    .w80{
+        width: 80vw;
+    }
+
+    .btn-round{
+        text-align: center;
+        background-color: var(--main-color);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+    .nactive{
+        color: white;
+    }
+    .active{
+        color: var(--main-color);
+    }
+
+    /**** Mobile ****/ 
+    @media only screen and (max-width: 604px) {
+        #side-content{
+            display: none;
+        }
+        #main-content{
+            width: 100vw;
+        }
+    }

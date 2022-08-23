@@ -9,6 +9,9 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+/* angular-cli file: src/styles.css */
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -65,3 +68,37 @@ body{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.menu{
+    height: 20px;
+    width: 30px;
+    position: relative;
+    z-index: 101;
+
+}
+.menu::after, .menu::before{
+    z-index: 101;
+    content: "";
+    background: black;
+    height: 2px;
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+}
+.menu::after{
+    top: 0 ;
+    margin-top: 5px;
+}
+.menu::before{
+    bottom: 0;
+    margin-bottom: 5px;
+}
+@keyframes slideY-in {
+    from{
+        top:-100vh  
+      }
+    to{
+        top: 0;
+    }
+}
