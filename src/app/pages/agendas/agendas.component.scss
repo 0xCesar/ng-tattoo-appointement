@@ -16,7 +16,7 @@
             #upevent{
                 background-color: white;
                 width: 90%;
-                padding-bottom: 20px;
+           
                 h5{
                     margin: 0;
                 }
@@ -88,6 +88,12 @@
     }
     .active{
         color: var(--main-color);
+    }
+    mat-card{
+        margin-bottom: 20px;
+    }
+    .content{
+        margin-left: 5%;
     }
 
     /**** Mobile ****/ 

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarService } from 'src/app/service/calendar.service';
 
 @Component({
   selector: 'app-agendas',
   templateUrl: './agendas.component.html',
-  styleUrls: ['./agendas.component.scss']
+  styleUrls: ['./agendas.component.scss'],
+  providers:  [ CalendarService ]
 })
 export class AgendasComponent implements OnInit {
   selected: Date | null = null;
@@ -19,9 +21,14 @@ export class AgendasComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private calendarService: CalendarService) { }
 
   ngOnInit(): void {
+  }
+  
+  testService(){
+    let res = this.calendarService.getTest();
+    console.log(res);
   }
 
 }

@@ -20,7 +20,7 @@
 
         <div *ngIf="selectedPage === 'dashboard'">
             <main>
-               
+                
                 <mat-card id="upevent"> 
                     <div class="header-card">
                         <h5>Upcoming event</h5>
@@ -47,15 +47,28 @@
        
 
 
-        <div *ngIf="selectedPage === 'calendar'">
-            calendrier
+        <div *ngIf="selectedPage === 'calendar'" class="content">
+
+            <mat-card class="calendar">
+                <mat-calendar [(selected)]="selected"></mat-calendar>
+            </mat-card>
+
+            <div>
+                <button mat-raised-button>Add appointement</button>
+                <button mat-raised-button>Transfert Calendar </button>
+                <button  (click)="testService()" mat-raised-button>Test Calendar </button>
+            </div>
+
+
         </div>
 
-        <div *ngIf="selectedPage === 'statistique'">
+        <div *ngIf="selectedPage === 'statistique'" class="content">
             statistique
+            <button mat-raised-button>Test http</button>
+               <br>
         </div>
 
-        <div *ngIf="selectedPage === 'setting'">
+        <div *ngIf="selectedPage === 'setting'" class="content">
             setting
         </div>
        <!--- <div>

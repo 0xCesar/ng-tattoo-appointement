@@ -26,7 +26,8 @@ import { AgendasComponent } from './pages/agendas/agendas.component';
 import { AppointementDetailsComponent } from './component/appointement-details/appointement-details.component';
 import { LineInfoComponent } from './component/line-info/line-info.component';
 import { ButtonWIconComponent } from './component/button-w-icon/button-w-icon.component';
-
+import { SetWeeklySlotsComponent } from './modal/set-weekly-slots/set-weekly-slots.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,11 +46,14 @@ import { ButtonWIconComponent } from './component/button-w-icon/button-w-icon.co
     AppointementDetailsComponent,
     LineInfoComponent,
     ButtonWIconComponent,
+    SetWeeklySlotsComponent,
+    
 
   ],
   imports: [
     
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSelectModule,
