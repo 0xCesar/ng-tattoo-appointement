@@ -27,6 +27,17 @@ export class CalendarService {
       complete: () => console.log('DONE!')
   });
   }
+
+  login(loginCli: string, pdwCli: string){
+    return this.http.post(this.urlConfig, {'login': loginCli, 'pdw': pdwCli}).subscribe({
+      next: value => console.log(value),
+      error: err => console.error(err),
+      complete: () => console.log('DONE!')
+  });
+
+  
+    
+  }
   
 }
 

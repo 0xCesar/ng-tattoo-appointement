@@ -31,4 +31,9 @@ export class AgendasComponent implements OnInit {
     console.log(res);
   }
 
+  testLogin(){
+   // let res = this.calendarService.login();
+   // console.log(res)
+  }
+
 }
