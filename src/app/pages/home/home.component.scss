@@ -404,3 +404,31 @@ header{
         width: 25%;
     }
 }
+
+.hovereffect::after{
+    animation:  translate20px;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+.hovereffect:hover::after{
+    animation:  translate-20px;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes translate-20px {
+    from{
+       transform: translateX(0px);
+    }
+    to{
+        transform: translateX(20px);
+    }
+}
+@keyframes translate20px {
+    from{
+       transform: translateX(20px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

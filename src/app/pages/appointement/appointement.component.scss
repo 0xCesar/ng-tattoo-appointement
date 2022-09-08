@@ -37,14 +37,6 @@
     }
 }
 
-#large-step-1{
- //   background-color: bisque;
-    padding: 10px;
-    width: 90vw;
-    border-radius: 6px;
-   
-}
-
 #large-step-2{
  //   background-color: rgb(120, 207, 187);
     padding: 10px;
@@ -77,22 +69,84 @@
     padding-bottom: 40px;
 
 }
-
+// PROGRESS BAR
+.mat-progress-bar{
+    height: 8px !important;
+}
 
 .white::after, .white::before{
     background: white !important;
 }
 main{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vh;
-    background-color: #cacaca;
-    width: 90vw;
-    height: 90vh;
-    overflow: scroll;
-    display: flex;
-    border-radius: 12px;
+    overflow: hidden;
+    width: 100vw;
 }
+#cs-block-container{
+//  background-color: aqua;
+    display: flex;
+    width: 300vw;
+  .flex-btw{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    align-items: center;
+    text-align: center;
+  }  
+  .cs-block-first{
+   width: 95vw;
+   padding-left: 2.5vw; 
+   padding-right: 2.5vw;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   #container-slot-day{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    .mat-raised-button {
+        min-height: 60px !important;
+        min-width: 150px !important;
+        margin-bottom: 20px;
+       }
+   }
+
+  }
+
+
+  .cs-block-second{
+    width: 95vw;
+    padding-left: 2.5vw; 
+    padding-right: 2.5vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 100vh;
+  
+    background: white;
+
+    //animation
+    animation-duration: 0.4s;
+     animation-name: animateright-desktop;
+    animation-fill-mode: forwards;
+  }
+
+
+  .cs-block-third{
+    width: 95vw;
+    padding-left: 2.5vw; 
+    padding-right: 2.5vw;
+    background: white;    height: 100vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  //  animation-duration: 20s;
+ //   animation-name: slidovwtoovwein;
+    animation-duration: 0.4s;
+    animation-name: animateright-desktop;
+    animation-fill-mode: forwards;
+    .projecttattoo{
+        align-items: flex-start;
+    }
+    
+  }
+}
+
+
+
 header{
     display: flex;
     width: 88vw;
@@ -177,6 +231,41 @@ header{
     .desktopp{
         display: block !important;
     }
+
+    #cs-block-container{
+        width: 100vw;
+        margin-top: 5vh;
+
+        .cs-block-third, .cs-block-second, .cs-block-first{
+            width: 30vw;
+        }
+        
+    }
+    .btnNext{
+        height: fit-content;
+        margin-left: 5vw;
+        margin-top: 30vh;
+    }
+  
+
+    
 }
 
 
+@keyframes toovwtwooovw-mobile {
+    0% { transform: translateX(-100vw);}
+    72% { transform: translateX(-172vw);}
+    100% { transform: translateX(-200vw);}
+  }
+
+
+@keyframes ovwtoovw-mobile {
+    0% { transform: translateX(0vw);}
+    94% { transform: translateX(-94vw);}
+    100% { transform: translateX(-100vw);}
+  }
+
+@keyframes animateright-desktop
+{from{right:-300px;opacity:0}
+ to{right:0;opacity:1}
+}

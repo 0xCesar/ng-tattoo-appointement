@@ -28,6 +28,12 @@ import { LineInfoComponent } from './component/line-info/line-info.component';
 import { ButtonWIconComponent } from './component/button-w-icon/button-w-icon.component';
 import { SetWeeklySlotsComponent } from './modal/set-weekly-slots/set-weekly-slots.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FolderCliComponent } from './component/folder-cli/folder-cli.component';
+import { ModalAppointmentComponent } from './pages/appointement/modal-appointment/modal-appointment.component';
+
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -47,6 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     LineInfoComponent,
     ButtonWIconComponent,
     SetWeeklySlotsComponent,
+    FolderCliComponent,
+    ModalAppointmentComponent,
     
 
   ],
@@ -63,8 +71,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-
-    MatProgressBarModule
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatProgressBarModule,
+    MatDialogModule
 
   ],
   providers: [

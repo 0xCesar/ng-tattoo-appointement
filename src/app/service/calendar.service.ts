@@ -7,7 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
 
 export class CalendarService {
 
-  urlConfig = "http://localhost:3000/login";
+  urlConfig = "http://localhost:3000/";
               
  
 
@@ -28,16 +28,7 @@ export class CalendarService {
   });
   }
 
-  login(loginCli: string, pdwCli: string){
-    return this.http.post(this.urlConfig, {'login': loginCli, 'pdw': pdwCli}).subscribe({
-      next: value => console.log(value),
-      error: err => console.error(err),
-      complete: () => console.log('DONE!')
-  });
 
-  
-    
-  }
   
 }
 

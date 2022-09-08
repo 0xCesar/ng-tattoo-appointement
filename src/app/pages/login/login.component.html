@@ -1,17 +1,17 @@
 <div id="login-page" class="w100 h100">
     <h2>Login Page</h2>
-    <form class="example-form">
+    <form class="example-form"  [formGroup]="loginForm" (ngSubmit)="login()">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Login</mat-label>
-          <input matInput placeholder="Your Login">
+          <input type="text" formControlName="username" matInput placeholder="Your Login">
         </mat-form-field>
       
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="Your Password">
+            <input type="password" formControlName="password"  matInput placeholder="Your Password">
         </mat-form-field>
 
-        <button mat-raised-button color="primary">Login</button>
-        <a href="agendas">go to agenda</a>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      <!--- <a href="agendas">go to agenda</a>-->
       </form>
 </div>

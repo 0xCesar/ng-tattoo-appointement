@@ -4,6 +4,8 @@
         display: flex;
         --main-color: #E29838;
         background-color: #252125;
+        --fullDispo : #2c8e1bb3;
+        --semiDispo : #e4f61f;
         #main-content{
             background-color: #F8F7F2;
             border-top-left-radius: 40px;
@@ -94,6 +96,14 @@
     }
     .content{
         margin-left: 5%;
+    }
+    .calendarWithDates{
+        .fullDispo{
+            background-color: var(--fullDispoDispo);
+        }
+        .semiDispo{
+            background: var(--semiDispo);
+        }
     }
 
     /**** Mobile ****/ 

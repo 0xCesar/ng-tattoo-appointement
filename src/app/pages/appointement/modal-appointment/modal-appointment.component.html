@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="left">
+        <img src="../../../../assets/Folder_noBG.svg" />
+
+        <p class="no-bottom topmore">September 2, 2022 at 12h00</p>
+        <p class="no-top">At le tattoo bocal</p>
+
+        <h3>appointment fee : 50$</h3>
+    </div>
+
+
+    <div class="right">
+        <h2>Paiement Details</h2>
+        <div class="flex-btw">
+        <label>Name : </label>
+        <mat-form-field appearance="fill">
+            <textarea matInput placeholder="John Doe"></textarea>
+        </mat-form-field>
+        </div>
+
+        <div class="flex-btw">
+            <label>Card number : </label>
+            <mat-form-field appearance="fill">
+                <textarea matInput placeholder="4990 0123 0123 0123 "></textarea>
+            </mat-form-field>
+        </div>
+      
+
+        <div class="flex-btw">
+            <div class="left-al">
+            <label>Expiration date: </label>
+            <div class="flex-btw">
+                <mat-form-field appearance="fill" class="lil-box">
+                    <textarea matInput placeholder="MM"></textarea>
+                </mat-form-field>
+        
+                <mat-form-field appearance="fill"  class="lil-box">
+                    <textarea matInput placeholder="AA"></textarea>
+                </mat-form-field>
+            </div>
+            </div>
+            <div class="left-al" id="CVV">
+                <label>CVV : </label>
+                <div class="boxes">
+                    <mat-form-field appearance="fill"  class="lil-box">
+                    <textarea matInput [type]="'hide'"  placeholder="OOO"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+          
+        </div>
+       
+       
+        <p><mat-checkbox [color]="'warn'">I'm older than 18 years old and I agree with thoses therms</mat-checkbox></p>
+
+        <button mat-raised-button id="buyit" color="primary">BUY NOW</button>
+    </div>
+</div>

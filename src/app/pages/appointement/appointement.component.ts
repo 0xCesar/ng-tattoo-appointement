@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
-
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
+import {ThemePalette} from '@angular/material/core';
+import { ModalAppointmentComponent } from './modal-appointment/modal-appointment.component';
 @Component({
   selector: 'page-appointement',
   templateUrl: './appointement.component.html',
@@ -10,6 +11,7 @@ export class AppointementPage implements OnInit {
 
   step1: boolean = true;
   step1Value: string = "e";
+  step: number = 0;
 
   _stepCount: number = 1;
 
@@ -21,7 +23,9 @@ export class AppointementPage implements OnInit {
   progressbarV: string = "33";
   menu: boolean = false;
   paymentHandler: any = null;
-  constructor() {}
+  constructor(
+    private matDialog: MatDialog
+  ) {}
   ngOnInit() {
     this.invokeStripe();
   }
@@ -79,5 +83,25 @@ export class AppointementPage implements OnInit {
   switchMenuState(){
     this.menu = !this.menu;
   }
+
+  incrStep()
+  {
+    this.step = this.step + 1;
+    if(this.step === 1){
+      this.progressbarV = "66";
+    }else{
+      this.progressbarV = "95";
+    }
+  }
+
+  openModal() {
+    this.matDialog.open(ModalAppointmentComponent, {
+      "width": '75vw',
+      "height": '90vh',
+
+      "autoFocus": false
+    });
+  }
+
 
 }

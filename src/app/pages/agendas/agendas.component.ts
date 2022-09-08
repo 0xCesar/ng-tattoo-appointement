@@ -22,9 +22,12 @@ export class AgendasComponent implements OnInit {
 
 
   constructor(private calendarService: CalendarService) { }
+  startDate = new Date(2018, 3, 10);
+  ogDate = new Date(1990, 0, 1);
 
   ngOnInit(): void {
   }
+
   
   testService(){
     let res = this.calendarService.getTest();

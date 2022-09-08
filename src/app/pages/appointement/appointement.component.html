@@ -21,13 +21,18 @@
         <mat-progress-bar
             #progressbar
             [color]="'purple'"
-            [mode]="'determinate'"
-            [value]="progressbarV">
+           
+ 
+            [value]="progressbarV"
+            >
         </mat-progress-bar>
       </section>
     <main>
         
-        <div id="large-step-1" #largestep1 *ngIf="_stepCount===1">
+      <!--- <div id="large-step-1" #largestep1 *ngIf="_stepCount===1">
+
+
+
             <div id="sub-header">
                 <h2>Schedule yours future tattoo</h2>
                 <p>Choose your size, then pickup the date and book a slot.
@@ -35,51 +40,7 @@
                    You won't be able to change the date 48 hours before appointement.
                 </p>
             </div>
-            <div id="container-step-1" *ngIf="step1">
-                <label>Select the tattoo size</label>
-                <mat-form-field appearance="fill">
-                    <mat-label>Select Size</mat-label>
-                    <mat-select>
-                      <mat-option value="small">Small Tattoo(around 6cmx6cm)</mat-option>
-                      <mat-option value="medium">Medium Tattoo(around 10cmx10cm)</mat-option>
-                      <mat-option value="large">Large Tattoo(around 15cmx15cm)</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-            
-            <div id="container-step-2">
-                <label>Pickup your date</label>
-                <mat-form-field appearance="fill">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-               
-            </div>
-            <div id="container-step-3">
-                <label>Book a slot</label>
-                <div class="flex space-around">
-                    <div>
-                        <button mat-raised-button disabled>14:30</button>
-                        <h5>Créneau déja pris</h5>
-                    </div>
-                    <div>
-                        <button mat-raised-button >12:00</button>
-                        <h5>Créneau séléctionable</h5>
-                    </div>
-                    <div>
-                        <button mat-raised-button color="primary">16:00</button>
-                        <h5>Créneau séléctionné</h5>
-                    </div>
-                   
-                   
-                </div>
-                <button (click)="nextStep()" mat-button color="primary">Suivant</button>
-            </div>
-        </div>
-
+           
         <div id="large-step-2"  #largestep2 *ngIf="_stepCount===2">
         <h2>Enter your informations</h2>
         <p>Enter your informations and write about your project</p>
@@ -132,6 +93,110 @@
                 </div>
               </div>
         </div>
-       
-    </main>
+    --> 
+    
+    <!-- TO DESTROY WHEN FINISH BELOW-->
+   <!---- <div>
+        <button (click)="makePayment(50)" mat-raised-button >Pay $50</button>
+      </div>-->
+
+    <div id="cs-block-container">
+            <div class="cs-block-first">
+                <div class="flex-btw">
+                    <label>Tattoo size : </label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Size</mat-label>
+                        <mat-select>
+                        <mat-option value="small">Small Tattoo(around 6cmx6cm)</mat-option>
+                        <mat-option value="medium">Medium Tattoo(around 10cmx10cm)</mat-option>
+                        <mat-option value="large">Large Tattoo(around 15cmx15cm)</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="flex-btw">
+                    <label>Tattoo zone : </label>
+                    <mat-form-field appearance="fill">
+                        <textarea matInput placeholder="Ex. My left hand"></textarea>
+                    </mat-form-field>
+                </div>
+                    
+                <div class="flex-btw">
+                    <label>When : </label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint><!--- <== Test purpose -->
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div id="container-slot-day">
+                    <button mat-raised-button >12:00</button>
+                    <button mat-raised-button disabled>14:00</button>
+                    <button mat-raised-button >16:00</button>
+                    <button mat-raised-button color="primary">17:30</button>
+                </div>
+            </div>
+
+            <div class="cs-block-second" *ngIf="step>=1">
+               
+                <div class="flex-btw">
+                    <label>Full name : </label>
+                    <mat-form-field appearance="fill">
+                        <textarea matInput placeholder="John Doe"></textarea>
+                    </mat-form-field>
+                </div>
+
+                <div class="flex-btw">
+                    <label>Instagram contact : </label>
+                    <mat-form-field appearance="fill">
+                        <textarea matInput placeholder="@JohnDoe"></textarea>
+                    </mat-form-field>
+                </div>
+
+                <div class="flex-btw">
+                    <label>Email : </label>
+                    <mat-form-field appearance="fill">
+                        <textarea matInput placeholder="johndoe@gmail.com"></textarea>
+                    </mat-form-field>
+                </div>
+                
+                <div class="flex-btw">
+                    <label>Phone number : </label>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <span matPrefix>+33 &nbsp;</span>
+                        <input type="tel" matInput placeholder="123456789">
+                    </mat-form-field>
+                </div>
+                
+                <div class="flex-btw">
+                    <label>Skin color : </label>
+                    <div id="skin-color-selector">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <span matPrefix>+33 &nbsp;</span>
+                        <input type="tel" matInput placeholder="123456789">
+                    </mat-form-field>
+                    </div>
+                </div>
+                
+            </div>
+            <button  mat-raised-button  *ngIf="step===0" (click)=" incrStep();" class="btnNext" color="primary">Next</button>
+
+
+            <div class="cs-block-third" *ngIf="step>=2">
+                <div class="flex-btw projecttattoo">
+                    <label>Tattoo project : </label>
+                    <mat-form-field appearance="fill">
+                        <textarea matInput id="project" placeholder="Ex. I want a snake..."></textarea>
+                    </mat-form-field>
+                </div>
+                <button  mat-raised-button color="primary" (click)="openModal();">Pay fees advance</button>
+            </div>
+            <button  mat-raised-button  *ngIf="step===1" (click)=" incrStep()" class="btnNext" color="primary">Next</button>
+    </div>
+
+</main>
+<!--<folder-cli></folder-cli>-->
 </div>

@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    .left{ 
+        width: 50%;
+        img{
+            display: block;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 80px;
+            
+        }
+        .no-top{
+            margin-top: 0;
+        }
+        .topmore{
+            margin-top: 10vh;
+        }
+        .no-bottom{
+            margin-bottom: 0;
+        }
+        p, h3{
+            text-align: center;
+        }
+    }
+    .right{  
+        width: 50%;
+        .flex-btw{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 25px;
+            align-items: center;
+            text-align: center;
+        } 
+        .lil-box{
+            width: 100px !important;
+        }
+
+        #CVV{
+            .boxes{
+                padding-top: 25px;
+            }
+        }
+        #buyit{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        
+        }
+    }
+}
+.left-al{
+    text-align: left;
+    width: 45%;
+}
